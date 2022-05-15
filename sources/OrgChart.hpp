@@ -23,7 +23,7 @@ namespace ariel
         public:
         
         // Constructors
-        OrgChart();
+        OrgChart(){}
 
         // Getter & setters
         int get_size(){

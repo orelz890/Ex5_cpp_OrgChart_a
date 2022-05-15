@@ -3,9 +3,7 @@
 
 namespace ariel
 {
-    OrgChart::OrgChart(){
-        
-    }
+
     // Funcs
     OrgChart& OrgChart::add_root(string supirior_name){
 

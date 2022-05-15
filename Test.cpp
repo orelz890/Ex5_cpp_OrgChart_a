@@ -9,10 +9,13 @@ using namespace ariel;
 
 TEST_CASE("Good tests"){
     OrgChart chart;
+    // ==============================
     // Check add_root & add_sub funcs
+    // ==============================
     string order;
     int size = 0;
 
+    // Check add_root
     CHECK_NOTHROW(chart.add_root("top1"));
     for (auto i = chart.begin_level_order(); i != chart.end_level_order(); ++i)
     {
@@ -24,6 +27,7 @@ TEST_CASE("Good tests"){
     CHECK(size == 1);
     order.clear();
     size = 0;
+
     CHECK_NOTHROW(chart.add_sub("top1", "top2"));
     for (auto i = chart.begin_level_order(); i != chart.end_level_order(); ++i)
     {
@@ -40,6 +44,7 @@ TEST_CASE("Good tests"){
     CHECK_NOTHROW(chart.add_sub("top3", "top6"));
     CHECK_NOTHROW(chart.add_sub("top3", "top7"));
 
+    // Check level order
     for (auto i = chart.begin_level_order(); i != chart.end_level_order(); ++i)
     {
         size++;
